@@ -1,0 +1,15 @@
+<%= form_tag("/dashboards/convert_currency", method:'POST') do |f| %>
+  <fieldset class="form-group">
+      <%= number_field :currency_value, :currency_value, :required => true, value: @original_amt%>
+  </fieldset>
+  <fieldset class="form-group">
+      <%= select_tag 'currency1', options_from_collection_for_select(@currencies, :id, :currency_name)%>
+  </fieldset>
+  <fieldset class="form-group">
+      <%= select_tag 'currency2', options_from_collection_for_select(@currencies, :id, :currency_name)%>
+  </fieldset>
+  
+  <fieldset class="form-group">
+     <%= submit_tag "Convert", id: 'convert_btn' %>
+  </fieldset>
+<% end %>

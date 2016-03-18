@@ -1,0 +1,18 @@
+== README
+Rails Version : Rails 4.1.1
+
+Ruby Version : ruby 2.1.2p95
+
+Steps For Application Setup :
+
+1) bundle install
+2) rails s
+
+
+* This application uses "/finance/converter" API for currency conversion. It's free API for conversion.
+
+* Rspec is written for this application which check if the converted value is same as the API result. To run this spec you need to stub the request.
+
+* Gems used for rspec :
+  gem 'rspec-rails'
+  gem 'webmock
